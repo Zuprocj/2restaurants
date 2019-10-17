@@ -28,11 +28,11 @@ app.get('/api/waitlist', function (req, res) {
 });
 
 app.post('/api/waitlist', function (req, res) {
-    var newTable = req.body;
-    newTable.routeName = newTable.name.replace(/\s+/g, '').toLowerCase();
-    console.log(newTable);
-    table.push(newTable);
-    res.json(newTable);
+    var newReservation = req.body;
+    newReservation.routeName = newReservation.name.replace(/\s+/g, '').toLowerCase();
+    console.log(newReservation);
+    table.push(newReservation);
+    res.json(nnewReservation);
 });
 
 app.listen(PORT, function () {
