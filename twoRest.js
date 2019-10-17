@@ -14,10 +14,10 @@ var tableData = [
 ];
 var waitlist = [
     {        
-    name: '',
-    phone: '',
-    email: '',
-    uniqueID: ''
+    customerName: '',
+    phoneNumber: '',
+    customerEmail: '',
+    customerID: ''
     }
 ];
 
