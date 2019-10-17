@@ -4,6 +4,23 @@ var path = require('path');
 var app = express();
 var PORT = 3000;
 
+var tableData = [
+    { 
+        name: '',
+        phone: '',
+        email: '',
+        uniqueID: ''
+    }
+];
+var waitlist = [
+    {        
+    name: '',
+    phone: '',
+    email: '',
+    uniqueID: ''
+    }
+];
+
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
@@ -20,7 +37,7 @@ app.get('/make', function(req, res) {
 });
 
 app.get('/api/tables', function (req, res) {
-    return res.json(tables);
+    return res.json(tableData);
 });
 
 app.get('/api/waitlist', function (req, res) {
