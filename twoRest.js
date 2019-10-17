@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 
 var app = express();
-var port = 3306;
+var PORT = 3000;
 
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
@@ -29,7 +29,7 @@ app.get('/api/waitlist', function (req, res) {
 
 app.post('/api/waitlist', function (req, res) {
     var newTable = req.body;
-    newTable.routeName = newTable.name.replace(?|s+/g, '').toLowerCase();
+    newTable.routeName = newTable.name.replace(/\s+/g, '').toLowerCase();
     console.log(newTable);
     table.push(newTable);
     res.json(newTable);
