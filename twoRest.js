@@ -32,7 +32,7 @@ app.post('/api/waitlist', function (req, res) {
     newReservation.routeName = newReservation.name.replace(/\s+/g, '').toLowerCase();
     console.log(newReservation);
     table.push(newReservation);
-    res.json(nnewReservation);
+    res.json(newReservation);
 });
 
 app.listen(PORT, function () {
